@@ -1,0 +1,42 @@
+define(['pipAPI', 'https://pjhwann.github.io/solid.github.io/'], function(APIConstructor, epExtension){
+	var API = new APIConstructor();
+	var global = API.getGlobal();
+	return epExtension(
+	{
+			//The prime categories.
+			primeCats :  [
+				{
+					name : 'Humilityone', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    				    {word : 'Humility'}, 
+    					{word : 'Modesty'}, 
+    					{word : 'Humbleness'}, 
+    					{word : 'Openmindness'}, 
+    					{word : 'Humble'}
+				    ]
+				}, 
+				{
+					name : 'humility two', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    					{word : 'Modest'}, 
+    					{word : 'Appreciation'}, 
+    					{word : 'Transcendence'}, 
+    					{word : 'Openness'}, 
+    					{word : 'Respect'}
+    				]
+				}
+			],	
+
+			nTrialsPerPrimeTargetPair:15, //How many trials in a block, per prime-target combination (always three blocks).
+			fixationDuration : 500, 
+			errorFBDuration : 1500, 
+			ITIDuration : 500,
+
+			//Set the image folder here.
+			base_url : {
+				image : "https://baranan.github.io/minno-tasks/images/"
+			}
+	});
+});
